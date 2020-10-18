@@ -1,78 +1,50 @@
-body{
-    border:1px green solid;
-    margin:0;
-    color: #979797;
-  }
-  .outer {
-	width: 100%;
-  	height: 100%;
-  }
-  .wrapper {
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0px 0px;
-  }
-  .sidebar {
-   	position:fixed;
-    left:0;
-    top: 0;
-    height:100%;
-    width:100px;
-    border:1px red solid;
-    display:inline-block;
-	background-color:beige;
-  }
-  .sidebar img {
-    width: 80px;
-    height: 80px;
-    border: #979797 solid 1px;
-    border-radius:50%;
-    margin: 9%;
-  }
-  .main {
-  	height:100%;
-    border:1px blue solid;
-    width:92%;
-    display:inline-block;
-    margin-left:100px;
-    background-color:lavender;
-  }
-  .main #header {
-  	margin-bottom: 50px;
-  	border-top: 1px solid #DEDEDE;
-  	border-bottom: 1px solid #DEDEDE;
-  	display: block;
-  	width: 100%;
-  	background-color: #FFF;
-  	margin: 0 auto;
-  	padding: 0;
-  	text-align: left;
-  }
-  .main #header h1 {
-  	font-size: 56px;
-  	font-weight: normal;
-  	font-style: italic;
-  	text-transform: uppercase;
-  	text-align: center;
-  }
-  .main #header h4 {
-  	font-size: 16px;
-  	margin-bottom: 0;
-  	padding-bottom: 0;
-  	line-height: 1.8em;
-  	font-style: italic;
-  }
-  .main .column {
-  	float:left;
-  	height:468px;
-    border:1px orange solid;
-    width:33%;
-    display:inline-block;
-  }
-  .column h1 {
-  	font-size: 20px;
-  	text-align:center;
-  }
+:root {
+  --main-accent-color:#660099;
+  --main-accent-hover-color:#bb33ff;
+  --main-sec-accent1:#ff8811;
+  --main-sec-accent2:#dd1155;
+  --main-sec-accent3:#77ff00;
+  --main-tert-color: #ff8877;
+  --main-bg-color:#ffeedd;
+  --main-font-color:#686868;
+  --main-font-color-alt:#979797;
+  --main-font-color-dark:#262626;
+  --main-padding: 15px;  
+  --main-font-family: 'Fira Sans';
+  --main-font-family-header: 'Montserrat';
+}
+
+body {
+  margin:0;
+  color: var(--main-font-color);
+  font-family: var(--main-font-family);
+  background-color: var(--main-bg-color);
+  font-size: 22px;
+}
+.sidebar {
+  position:fixed;
+  right:0;
+  top: 0;
+  height:100%;
+  display:inline-block;
+  z-index:1050;
+  color:var(--main-accent-color);
+  background-color: var(--main-font-color-alt);
+  font-family: var(--main-font-family-header);
+}
+.sidebar a {
+  color:var(--main-accent-color);
+}
+.navbar {
+  background-color: var(--main-tert-color);
+  font-family: var(--main-font-family-header);
+}
+.nav-pills .nav-link.active {
+  background-color: var(--main-accent-color);
+}
+.nav-link {
+  color: var(--main-accent-color);
+}
+.nav-link:hover {
+  color: var(--main-accent-hover-color);
+}
